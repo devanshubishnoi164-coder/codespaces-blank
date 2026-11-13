@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Ajota Mart Jodhpur | Groceries, Cosmetics, Stationery &amp; Home Essentials</title>
+  <meta name="description" content="Ajota Mart, Badla Road, Bhadwasiya, Jodhpur. Jodhpur's one-stop mart for groceries, cosmetics, stationery and home essentials. Order online." />
+  <meta name="theme-color" content="#17120d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOGO SYMBOL (matches Ajota Mart logo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 64 64">
+    <defs>
+      <radialGradient id="lg" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ff8a1f"/><stop offset="1" stop-color="#b34a00"/></radialGradient>
+      <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#f2a900"/></linearGradient>
+    </defs>
+    <circle cx="32" cy="32" r="31" fill="url(#lg)"/>
+    <polygon points="22,12 42,12 52,22 52,42 42,52 22,52 12,42 12,22" fill="url(#gg)" stroke="#17120d" stroke-width="2"/>
+    <text x="32" y="40" text-anchor="middle" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="22" fill="#17120d">AM</text>
+  </symbol>
+</svg>
+
+<div class="progress" id="progress"></div>
+
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <div class="hdr-top">
+    <button class="menu-btn" id="menuBtn" aria-label="All categories">☰</button>
+    <a class="logo" href="#/" aria-label="Ajota Mart home">
+      <svg class="logo-svg" viewBox="0 0 64 64"><use href="#logo"/></svg>
+      <span class="logo-t">AJOTA<b>MART</b></span>
+    </a>
+    <div class="loc"><span>Visit us</span><b>Badla Road, Jodhpur</b></div>
+    <form class="search" id="searchForm" autocomplete="off">
+      <select id="searchCat" aria-label="Category">
+        <option value="">All</option>
+        <option value="groceries">Groceries</option>
+        <option value="cosmetics">Cosmetics</option>
+        <option value="stationery">Stationery</option>
+        <option value="home">Home</option>
+      </select>
+      <input id="q" type="search" placeholder="Search oil, sugar, haldi, soap, notebook..." />
+      <button type="submit" aria-label="Search">🔍</button>
+      <div class="sugg" id="sugg"></div>
+    </form>
+    <a class="hl" href="#/account" id="acctLink"><span id="acctSmall">Hello, sign in</span><b>Account</b></a>
+    <a class="hl hl-o" href="#/orders"><span>Your</span><b>Orders</b></a>
+    <a class="cart-btn" href="#/cart" id="cartBtn" aria-label="Cart"><span class="cart-i">🛒<em id="cartCount">0</em></span><b>Cart</b></a>
+  </div>
+  <nav class="subnav" id="subnav">
+    <a href="#/deals" data-n="deals">⚡ Today's Deals</a>
+    <a href="#/cat/groceries" data-n="groceries">Groceries</a>
+    <a href="#/cat/cosmetics" data-n="cosmetics">Cosmetics</a>
+    <a href="#/cat/stationery" data-n="stationery">Stationery</a>
+    <a href="#/cat/home" data-n="home">Home Essentials</a>
+    <a href="#/wishlist" data-n="wishlist">♥ Wishlist</a>
+    <a href="#/support" data-n="support">Customer Support</a>
+  </nav>
+</header>
+
+<!-- CATEGORY DRAWER -->
+<div class="ov" id="ov"></div>
+<aside class="cdrawer" id="cdrawer" aria-label="All categories"></aside>
+
+<!-- APP -->
+<main id="app"></main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a class="to-top" href="#/" id="toTop">Back to top</a>
+  <div class="wrap f-grid">
+    <div>
+      <div class="f-brand"><svg class="logo-svg" viewBox="0 0 64 64"><use href="#logo"/></svg><span>AJOTA MART</span></div>
+      <p>Jodhpur's one-stop Mart! Groceries, cosmetics, stationery and home essentials with great offers.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#/cat/groceries">Groceries</a>
+      <a href="#/cat/cosmetics">Cosmetics</a>
+      <a href="#/cat/stationery">Stationery</a>
+      <a href="#/cat/home">Home Essentials</a>
+      <a href="#/deals">Today's Deals</a>
+    </div>
+    <div>
+      <h4>Your account</h4>
+      <a href="#/account">Account</a>
+      <a href="#/orders">Your Orders</a>
+      <a href="#/cart">Cart</a>
+      <a href="#/wishlist">Wishlist</a>
+    </div>
+    <div>
+      <h4>Help &amp; contact</h4>
+      <a href="tel:+918949406824">Call: 89494 06824</a>
+      <a href="https://wa.me/917742758460" target="_blank" rel="noopener">WhatsApp: 77427 58460</a>
+      <a href="https://www.instagram.com/ajotamartjodhpur" target="_blank" rel="noopener">Instagram: @ajotamartjodhpur</a>
+      <a href="#/support">Customer Support</a>
+      <p class="f-addr">📍 Badla Road, Bhadwasiya, Jodhpur</p>
+    </div>
+  </div>
+  <div class="f-bot">© <span id="year"></span> Ajota Mart Jodhpur. All rights reserved.</div>
+</footer>
+
+<!-- MOBILE BOTTOM BAR -->
+<nav class="bn" id="bn">
+  <a href="#/" data-b="home"><i>🏠</i><span>Home</span></a>
+  <button id="bnCats" data-b="cats"><i>▦</i><span>Categories</span></button>
+  <a href="#/deals" data-b="deals"><i>⚡</i><span>Deals</span></a>
+  <a href="#/cart" data-b="cart"><i>🛒<em id="bnCount">0</em></i><span>Cart</span></a>
+  <a href="#/account" data-b="account"><i>👤</i><span>Account</span></a>
+</nav>
+
+<a class="wa-float" href="https://wa.me/917742758460?text=Hello%20Ajota%20Mart" target="_blank" rel="noopener" aria-label="WhatsApp support">💬</a>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
